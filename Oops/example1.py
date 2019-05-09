@@ -7,13 +7,13 @@
 #Once class is ready===> multiple objects we can create.
 
 class Student:
-	def __init__(self,name,rollno):
+	def __init__(self,name,rollno):   #This is the constructor
 		self.name=name
 		self.rollno=rollno
 	def talk(self):
 		print("Hello My name is",self.name)
 		print("My rollno is",self.rollno)
-s=Student('Randhir',100)
+s=Student('Randhir',100)  #Object Creation step and s is the reference of Student object
 print(s.name)
 print(s.rollno)
 s.talk()		
