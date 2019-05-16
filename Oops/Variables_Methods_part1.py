@@ -34,9 +34,9 @@ class Student:
         print('College Name is',cls.clgname)
 		
 
-	@staticmethod
-	def findAverage(x,y):
-			print('Average is',(x+y)/2)
+     @staticmethod
+     def findAverage(x,y):
+         print('Average is',(x+y)/2)
 
 s1=Student('Randhir',200)
 s1.findAverage(10,20)
