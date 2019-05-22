@@ -112,4 +112,69 @@ print(s.name,s.rollno)  # By using object reference
 
 # How to delete instance variables:
 #---------------------------------------------------------------------------------------
+#1. Within the class :- del self.variablename
+   
+ class Test:
+    def __init__(self):
+        self.a=10
+        self.b=10
+        self.c=10
+    def  delete(self):
+        del self.b
+        del self.c
+t1=Test()
+t1.delete()
+print(t1.__dict__)
+
+# 2. Outside of the class :- del objectrefence.variable
+ 
+class Test:
+    def __init__(self):
+        self.a=10
+        self.b=10
+        self.c=10
+    def  delete(self):
+        del self.b
+        del self.c
+t1=Test()
+t1.delete()
+del t1.a
+print(t1.__dict__)
+
+#o/p :- {}
+
+# NOTE:- Instance variables deleted from one object may not deleted from other object.Every object created it's own instance variables.
+
+class Test:
+    def __init__(self):
+        self.a=10
+        self.b=10
+        self.c=10
+
+t1=Test()
+t2=Test()
+del t1.a
+del t2.b
+print(t1.__dict__)
+print(t2.__dict__)
+
+# O/p:- {'b': 10, 'c': 10}
+#       {'a': 10, 'c': 10}
+
+# Examples 2:-
+class Test:
+    def __init__(self):
+        self.a=10
+        self.b=20
+    
+t1=Test()
+t2=Test()
+t1.a=888
+t1.b=999
+print(t1.a,t1.b)
+print(t2.a,t2.b)
+
+#O/p:- 888 999
+#      10  20
+
 
