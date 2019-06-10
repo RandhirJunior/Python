@@ -1,0 +1,9 @@
+#Types of Methods
+#---------------------------------
+#1. instance methods
+#2. class methods
+#3. static methods
+
+# 1.If we are using atleast one instance variable ---->instance methods.
+# 2.If we are using only static variables but not instance variables ---->class methods.
+# 3.If we are not using instance or static variable ----> static methods.
