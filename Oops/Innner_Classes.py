@@ -20,3 +20,6 @@ e=Employee(12345,'Randhir',50000)
 Test.modify(e)
 
 #----------------------------Inner Class---------------------------------------------------------------------------------------
+# 1.The class which is declared inside another class.
+# 2.Without existing one type of object if there is no chance of existing another type of object then we should go for inner classes.
+
