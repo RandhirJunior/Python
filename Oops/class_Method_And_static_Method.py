@@ -13,7 +13,7 @@ def m1(cls):
 # 1.Inside method body if we are using atleast one instance variable then we complusory we should declare that method as instance method.
 # 1.Inside method body if we are using static variables then it is highly recommended to declare that method as class method.
 
-# 2.Ro declare instance method we are not required to use decorator.
+# 2.To declare instance method we are not required to use decorator.
 # To declare class method complusory we should use @classmethod decorator.
 
 # 3. The first argument of the instance method should be self,which is reference to current object and by using self ,we can access instance variables inside  method.
@@ -100,6 +100,74 @@ CalMath.avg(20,30)
 # Without any decorator the method can be either instance method or static method,If we are calling by using object reference it should be instance method.
 #If we are calling by using class name then it should be static method.
 
+# Example:-1
+class Test:
+    def m1():
+        print('hellooo')
+        
+t=Test()
+t.m1()
+
+# The above code ,Python will consider the method as instance method,but we are not declaring self variable.Hence we are getting below error.
+---------------------------------Error------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-1-2d0d5d2ddf2d> in <module>
+      4 
+      5 t=Test()
+----> 6 t.m1()
+
+TypeError: m1() takes 0 positional arguments but 1 was given
+--------------------------------------------------------------------------------
+
+
+# Example:-2
+
+class Test:
+    def m1():
+        print('hellooo')
+        
+Test.m1()
+# o/p:- hellooo
+
+# The above code is valid and python will consider this method as static method.
+
+# Example:- 3
+
+class Test:
+    @staticmethod
+    def m1():
+        print('hellooo')
+        
+t=Test()
+t.m1()
+
+# o/p:- hellooo
+
+# In the above code @staticmethod decorator is given due to which it's static method,and we can call static method either by class name or class reference.
+
+
+# Example:- 4
+
+class Test:
+   
+    def m1(x):
+        print('hellooo',x)
+        
+t=Test()
+t.m1(10)
+
+# In the above code ,Python will considered the m1() method as instance method bcz we are calling it by object reference and providing 
+# x as self to the method,But we are passing x as argument to the method so it's consider it 2 arguments(one is self and another one is x)
+
+------------------------------Error below---------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-7-a9c559cef3dc> in <module>
+      5 
+      6 t=Test()
+----> 7 t.m1(10)
+
+TypeError: m1() takes 1 positional argument but 2 were given
+------------------------------------------------------------------------------
 
 
 
