@@ -236,7 +236,40 @@ print(l3)
 
 # Nested Functions:-(function declared in another functions)
 #-----------------------------------------------------------------------------------
+# Example:-
+def f1():
+    def inner(a,b):
+        print("the sum is",a+b)
+        print("the average is",(a+b)/2)
+    inner(10,20)
+    inner(20,30)
+    inner(100,200)
+    
+f1()
+
+# Example: A function can return another function
+
+def outer():
+    print("outer function started")
+    def inner():
+        print("inner function executions")
+    print("outer function returing inner function")
+    return inner; # it means return inner function directly 
+
+f1=outer()  # f1 is pointing to inner function
+f1()
+
+# NOTE:---
+# f1=outer() # function call and return values is assign to f1
+# f1=outer # for outer function we are giving another name.
+
+
+# Function Decorators:-
+#--------------------------------------------------------------------------------------------
+# Input function====>Decorator Function====>Output function with extended functionality.
+# Decorator help to make our code shorter and more pythonic.
 #
+
 
 
 
