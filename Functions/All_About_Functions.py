@@ -269,7 +269,74 @@ f1()
 # Input function====>Decorator Function====>Output function with extended functionality.
 # Decorator help to make our code shorter and more pythonic.
 #
+# Example:-
+def decor(func):
+    def inner(name):
+        if name=='Sunny':
+            print("Hello Sunny Bad Morning..")
+        else:
+            func(name)
+    return inner
+@decor
 
+def wish(name):
+    print("Hello",name,"Good orning")
+    
+wish("Randhir")
+wish("Ravi")
+wish("Sunny")
+
+#o/p:-
+Hello Randhir Good orning
+Hello Ravi Good orning
+Hello Sunny Bad Morning..
+
+# Example 2:
+
+def decor(func):
+    def inner(name):
+        if name=='Sunny':
+            print("Hello Sunny Bad Morning..")
+        else:
+            func(name)
+    return inner
+#@decor
+
+def wish(name):
+    print("Hello",name,"Good orning")
+    
+
+
+decorfunction=decor(wish)  # here we calling it 
+
+wish("Sunny")
+decorfunction("Sunny")
+
+# Example 3:-
+
+def smartdiv(func):
+    def inner(a,b):
+        if b==0:
+            print("division not possibl with zero")
+            return
+        else:
+            return func(a,b)
+    return inner
+            
+@smartdiv
+
+def division(a,b):
+    return a/b
+
+print(division(10,2))
+print(division(10,0))
+
+# o/p:-
+5.0
+division not possibl with zero
+None
+
+#
 
 
 
