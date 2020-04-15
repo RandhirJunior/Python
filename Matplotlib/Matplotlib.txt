@@ -1,1 +1,4 @@
-This folder contains all details regarding matplotlib libararies.
+Matplotlib
+------------------------
+1.
+https://matplotlib.org/api/_as_gen/matplotlib.pyplot.html?highlight=plot#module-matplotlib.pyplot
