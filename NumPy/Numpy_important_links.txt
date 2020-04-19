@@ -1,0 +1,14 @@
+Linear Algebra Docs:
+https://docs.scipy.org/doc/numpy/reference/routines.linalg.html
+
+NumPy vs Lists:
+https://jakevdp.github.io/blog/2014/05/09/why-python-is-slow/
+
+Indexing: 
+https://docs.scipy.org/doc/numpy-1.13.0/user/basics.indexing.html
+
+Array Creation Routines:
+https://docs.scipy.org/doc/numpy/reference/routines.array-creation.html
+
+Math Routines Docs:
+https://docs.scipy.org/doc/numpy/reference/routines.math.html
